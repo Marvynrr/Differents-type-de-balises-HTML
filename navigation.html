@@ -7,21 +7,48 @@
 </head>
 <body>
     <h1>Bienvenue sur le cours n°3 (format Titre) (1 seul obligatoire)</h1>
-    <hr color="orange" size="3" width="25%">
-    <p>Cela permet de structurer le texte d'une page web.</p>
-    <p>Cela permet de mettre à la ligne.
-    <small><br>Ceci est un paragraphe avec une écriture plus petite.
-        <small><br>Encore plus petite
-            <small><br>Minuscule !
-            </small>
-        </small>
-    </small>
+        <hr color="orange" size="3" width="25%">
+    <h2>Exemple de balises</h2>
+        <p>La réunion aura lieu le <time datetime="2023-11-06T15:30">06 Novembre 2023 à 15h30</time>. (Une donnée utile pour les machines etc) <br>Cette balise peut être utile pour son année de naissance par exemple.</p>
+            <p><abbr title="Hypertext Markup Language">HTML</abbr> est ce qui permet de créer une page web et abbr = montrer la legende</p>
+                <p>La balise p permet de structurer le texte d'une page web.</p>
+                    <p>Cela permet de mettre à la ligne.</p>
+                <small><p>Ceci est un paragraphe avec une écriture plus petite.</p>
+                    <small><mark>Encore plus petit ! (balise mark permet de mettre en évidence le texte choisit)</mark></small>
+                </small><p>Ceci est la fin du paragraphe</p>
+    <h2>Exemple de balises</h2>
+    <h3>Image</h3>
+    <img src="etoile.jpg" width="200" alt="Quand l'image ne charge pas">
+    <h3>Musique</h3>
+    <audio controls>
+        <source src="Machine Gun Kelly - Swim Good (Frank Ocean Cover).mp3" type="audio/mpeg" alt="L'audio ne fonctionne pas" controls>
+        <source src="Machine Gun Kelly - Swim Good (Frank Ocean Cover).mp3" type="audio/ogg" alt="L'audio ne fonctionne pas" controls>
+        Votre navigateur ne supporte pas l'élément audio.
+    </audio>
     <br>
-        Ceci est la fin du paragraphe
-    </p>
+    <h3>Vidéo</h3>
+    <video controls width="200" height="100">
+        <source src="Machine Gun Kelly - Swim Good (Frank Ocean Cover).mp4" type="video/mp4" alt="L'video ne fonctionne pas" controls>
+        <source src="Machine Gun Kelly - Swim Good (Frank Ocean Cover).mp4" type="video/webm" alt="L'video ne fonctionne pas" controls>
+        <track kind="subtitles" src="sous-titres-fr.vtt" srclang="fr" label="français">
+        <track kind="subtitles" src="subtitles-en.vtt" srclang="en" label="english">
+        Votre navigateur ne supporte pas l'élément video.
+    </video>
+    <h3>Dessin</h3>
+    <canvas id="monCanvas" width="200" height="100"></canvas>
+    <script>
+        const canvas = document.getElementById('monCanvas');
+        const context = canvas.getContext('2d');
+    </script>
+    <h3>graphique vectorielle</h3>
+    <svg width="200" height="100">
+        <circle cx="50" cy="50" r="40" stroke="red" stroke-width="2" fill="grey" />
+    <!-- Ajouter éléments graphiques ici-->
+    </svg>
+<p><b>Voici un exemple de code HTML : </b><code>&lt;p&gt; Ceci est un paragraphe &lt;/p&gt;</code></p>
     <nav role="navigation">
         <ul>
-            <h2>Exemple de navigation (format sous-titre)</h2>
+            <h2 style="color: red;">Exemple de navigation (format sous-titre)</h2>
             <li><a href="/">Accueil</a></li>
             <li><a href="/produits">Produits</a></li>
             <li><a href="/services">Services</a></li>
@@ -36,7 +63,7 @@
             <li>Elément 3</li>
         </ul>
         <ul>
-            <h4>Exemple de listage avec sous-élément</h4>
+            <h4 style="color: blue;">Exemple de listage avec sous-élément</h4>
             <li>Elément 1</li>
             <li>Elément 2</li>
                 <ul>
@@ -46,7 +73,7 @@
             <li>Elément 3</li>
         </ul>
         <ol>
-            <h5>Exemple de listage numéroté</h5>
+            <h5 style="color: green;">Exemple de listage numéroté</h5>
             <li>Elément 1</li>
             <li>Elément 2</li>
             <li>Elément 3</li>
@@ -77,6 +104,31 @@
             <li><a href="/contact">Contact</a></li>
         </ol>
     </nav>
-    
+    <h3>Exemple tableaux</h3>
+    <table border="1" cellspacing="10">
+        <colgroup>
+            <col span="1" style="background-color: grey;">
+            <col span="2" style="background-color: rgb(75, 75, 75);">
+        </colgroup>
+        <tr>
+            <td>Cellule 1</td>
+            <td>Cellule 2</td>
+        </tr>
+        <tr>
+            <td>Cellule 3</td>
+            <td>Cellule 4</td>
+        </tr>
+    </table>
+    <br>
+    <table border="1">
+        <tr>
+            <th>Nom :</th>
+            <th>Prenom :</th>
+        </tr>
+        <tr>
+            <td>Richer</td>
+            <td>Marvyn</td>
+        </tr>
+    </table>
 </body>
 </html>
